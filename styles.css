@@ -1,0 +1,383 @@
+body
+        {
+            display: flow-root;
+            background: linear-gradient(blue, purple);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+            margin: 0px;
+            padding: 0px;
+        }
+        #headingMain
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            color: yellow;
+        }
+        #board
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column
+        }
+        #progressBar
+        {
+            display: inline;
+        }
+        #score
+        {
+            display: block;
+            color: chartreuse;
+            font-size: 13px;
+        }
+        #enemyLeft
+        {
+            display: block;
+            color : red;
+            font-size: 13px;
+        }
+        #data
+        {
+            display: flex;
+            width: 600px;
+            justify-content:space-between;
+        }
+        #progressHome
+        {
+            width: 200px;
+            height: 20px;
+            background-color: white;
+            border-radius: 5px;
+        }
+        #progressHome::before{
+            position: absolute;
+            content: "Home Health";
+            color: red;
+            padding-left: 5px;
+            font-weight: bold;
+        }
+        #progressHome::-webkit-progress-bar
+        {
+            background-color: white;
+            border-radius: 5px;
+            
+        }
+        #progressHome::-webkit-progress-value
+        {
+            background-color: lawngreen;
+            border-radius: 4px;
+        }
+        #progressHome::-webkit-progress-inner-element
+        {
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        #progressPlayer
+        {
+            width: 200px;
+            height: 20px;
+            background-color: white;
+            border-radius: 5px;
+        }
+        #progressPlayer::before{
+            position: absolute;
+            content: "Player Health";
+            color: red;
+            padding-left: 5px;
+            font-weight: bold;
+        }
+        #progressPlayer::-webkit-progress-bar
+        {
+            background-color: white;
+            border-radius: 5px;
+            
+        }
+        #progressPlayer::-webkit-progress-value
+        {
+            background-color: lawngreen;
+            border-radius: 4px;
+        }
+        #progressPlayer::-webkit-progress-inner-element
+        {
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        #gamePlace
+        {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100vw;
+        }
+        #pauseButton
+        {
+            display:block;
+            width : 250px;
+            padding:10px;
+            color:mediumblue;
+            font-weight: bold;
+            background-color: springgreen;
+            border-radius: 15px;
+            border: 3px solid darkgreen;
+            box-shadow: 0px 0px 15px 8px orange;
+        }
+        #pauseButton:hover
+        {
+            background-color: yellow;
+            box-shadow: 0px 0px 15px 8px lime;
+        }
+        #pauseButton:active
+        {
+            background-color: gold;
+            box-shadow: 0px 0px 15px 8px red;
+            transform: scale(0.75, 0.75);
+        }
+        #canvas
+        {
+            display: block;
+        }
+        #model
+        {
+            display: none; 
+            position: fixed; 
+            z-index: 1;
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        #modelName
+        {
+            display: none; 
+            position: fixed; 
+            z-index: 1;
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        #modelBody
+        {
+            background-color:orange;
+            margin: auto;
+            padding: 10px;
+            border: 5px solid red;
+            width: 40%;
+            height: 30%;
+            overflow: auto;
+            border-radius: 15px;
+        }
+        #modelBodyName
+        {
+            background-color:orange;
+            margin: auto;
+            padding: 10px;
+            border: 5px solid red;
+            width: 40%;
+            height: 30%;
+            overflow: auto;
+            border-radius: 15px;
+        }
+        #modelHeading
+        {
+            background-color:dodgerblue;
+            color:crimson;
+            font-size: 2.5vmin;
+            font-family: cursive;
+            width: 99%;
+            height: 10%;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding: 3px;
+            border-radius: 15px;
+        }
+
+        #modelHeadingName
+        {
+            background-color:dodgerblue;
+            color:crimson;
+            font-size: 2.5vmin;
+            font-family: cursive;
+            width: 99%;
+            height: 10%;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding: 3px;
+            border-radius: 15px;
+        }
+        #modelContent
+        {
+            background-color: seagreen;
+            color:white;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-family:  cursive;
+            padding: 5px;
+            font-size: 2vmin;
+            border-radius: 15px;
+        }
+        #modelContentName
+        {
+            background-color: seagreen;
+            color:white;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-family:  cursive;
+            padding: 5px;
+            font-size: 2vmin;
+            border-radius: 15px;
+        }
+        #buttonName
+        {
+            width : 90px;
+            display: flex;
+            background-color:lightsalmon;
+            color:navy;
+            font-size: 2vmin;
+            padding: 5px;
+            border: 2px solid orangered;
+            box-shadow: 0px 0px 10px red;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            font-family:  sans-serif;
+            cursor: pointer;
+            float: right;
+            margin-top: 50px;
+        }
+
+        #buttonName:active
+        {
+            transform: scale(0.75, 0.75);
+        }
+        #buttonName:hover
+        {
+            border: 2px solid lawngreen;
+            background-color:darkgreen ;
+            box-shadow: 0px 0px 10px lime;
+            color:white;
+        }
+
+        #modelButton
+        {
+            width : 90px;
+            display: flex;
+            background-color:lightsalmon;
+            color:navy;
+            font-size: 2vmin;
+            padding: 5px;
+            border: 2px solid orangered;
+            box-shadow: 0px 0px 10px red;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            font-family: sans-serif;
+            cursor: pointer;
+            float: right;
+        }
+
+        #modelButton:active
+        {
+            transform: scale(0.75, 0.75);
+        }
+        #modelButton:hover
+        {
+            border: 2px solid lawngreen;
+            background-color:darkgreen ;
+            box-shadow: 0px 0px 10px lime;
+            color:white;
+        }
+        #leaderBoard
+        {
+            width: 250px;
+            height:200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background-color:crimson;
+            border: 5px ridge orange;
+            box-shadow: 0px 0px 10px 2px yellow;
+        }
+        #heading
+        {
+            display: flex;
+            justify-content: center;
+            color: gold;
+            font-size: 25px;
+            font-family:  cursive;
+            width: 250px;
+            height: 50px;
+            align-items: center;
+            background-color: maroon;
+        }
+        #lists
+        {
+            width: 250px;
+            margin-top: 2px;
+        }
+        .rank
+        {
+            display:inline-flex;
+            font-size: 15px;
+            color:snow;
+            margin: 1px;    
+            text-shadow: 0px 0px 20px yellow;
+            font-family: serif;
+        }
+        .sno
+        {
+            display:flex;
+            width: 30px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .playerName
+        {
+            display:flex;
+            width: 150px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .playerScore
+        {
+            display:flex;
+            width: 70px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #resource
+        {
+            display:block;
+            width: 300px;
+            height: 300px;
+        }
+        #button
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+        }

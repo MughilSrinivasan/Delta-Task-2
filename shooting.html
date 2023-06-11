@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Droid Defense</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body onload="func()">
+    <h1 id="headingMain">DORID DEFENCE</h1>
+    <div id="board">
+        <div id="data">
+            <div id="progressBar">
+                <span data-value="progressHome" style="width: 60%;"></span>
+                <progress id="progressHome"  max="100"></progress>
+                <span data-value="progressPlayer" style="width: 60%;"></span>
+                <progress id="progressPlayer"  max="100"></progress>
+            </div>
+            <div id="enemyLeft">Enemy Left : </div>
+            <div id="score">SCORE : 0</div>
+        </div>
+        <br>
+        <div id="gamePlace">
+            <canvas id="canvas" width="600px" height="600px"></canvas>
+            <div id="resource">
+                <div id="button">
+                    <button onclick="pause()" id="pauseButton">Pause</button>
+                </div>
+                <br>
+                <br>
+                <div id="leaderBoard">
+                    <div id="heading">LEADER-BOARD</div>
+                    <div id="lists"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="model">
+            <div id="modelBody">
+                <div id="modelHeading"></div>
+                <br>
+                <div id="modelContent"></div>
+                <br>
+                <button id="modelButton" onclick="star()">OK</button>
+                <br><br>
+            </div>
+        </div>
+
+        <div id="modelName">
+            <div id="modelBodyName">
+                <div id="modelHeadingName">PROFILE</div>
+                <br>
+                <div id="modelContentName">
+                    <label>Name:</label>
+                    <input type="text" id= "nameValue" >
+                    <button onclick="check()" id="buttonName">OK</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
